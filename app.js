@@ -1,28 +1,156 @@
 const { useState } = React;
-const Phone = (props) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>;
-const Car = (props) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"></path><circle cx="7" cy="17" r="2"></circle><path d="M9 17h6"></path><circle cx="17" cy="17" r="2"></circle></svg>;
-const User = (props) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>;
-const IndianRupee = (props) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M6 3h12"></path><path d="M6 8h12"></path><path d="m6 13 8.5 8"></path><path d="M6 13h3"></path><path d="M9 13c6.667 0 6.667-10 0-10"></path></svg>;
-const Send = (props) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"></path></svg>;
-const CheckCircle = (props) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>;
-const FileText = (props) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" x2="8" y1="13" y2="13"></line><line x1="16" x2="8" y1="17" y2="17"></line><line x1="10" x2="8" y1="9" y2="9"></line></svg>;
 
+// SVG Icons
+const Phone = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+  </svg>
+);
+
+const Car = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2" />
+    <circle cx="7" cy="17" r="2" />
+    <path d="M9 17h6" />
+    <circle cx="17" cy="17" r="2" />
+  </svg>
+);
+
+const User = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+    <circle cx="12" cy="7" r="4" />
+  </svg>
+);
+
+const IndianRupee = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M6 3h12" />
+    <path d="M6 8h12" />
+    <path d="m6 13 8.5 8" />
+    <path d="M6 13h3" />
+    <path d="M9 13c6.667 0 6.667-10 0-10" />
+  </svg>
+);
+
+const Send = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="m22 2-7 20-4-9-9-4Z" />
+    <path d="M22 2 11 13" />
+  </svg>
+);
+
+const CheckCircle = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+    <polyline points="22 4 12 14.01 9 11.01" />
+  </svg>
+);
+
+const FileText = (props) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+    <polyline points="14 2 14 8 20 8" />
+    <line x1="16" x2="8" y1="13" y2="13" />
+    <line x1="16" x2="8" y1="17" y2="17" />
+    <line x1="10" x2="8" y1="9" y2="9" />
+  </svg>
+);
+
+// Main Component
 function TempleDonationApp() {
   const [formData, setFormData] = useState({
     donorName: '',
     vehicleNumber: '',
     mobileNumber: '',
-    amount: ''
+    amount: '',
   });
-  
+
   const [donations, setDonations] = useState([]);
   const [receiptSent, setReceiptSent] = useState(false);
   const [currentReceipt, setCurrentReceipt] = useState(null);
 
   const handleInputChange = (field, value) => {
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [field]: value
+      [field]: value,
     }));
   };
 
@@ -31,7 +159,9 @@ function TempleDonationApp() {
   };
 
   const handleSubmit = () => {
-    if (!formData.donorName || !formData.vehicleNumber || !formData.mobileNumber || !formData.amount) {
+    const { donorName, vehicleNumber, mobileNumber, amount } = formData;
+
+    if (!donorName || !vehicleNumber || !mobileNumber || !amount) {
       alert('Please fill all fields');
       return;
     }
@@ -41,27 +171,32 @@ function TempleDonationApp() {
       ...formData,
       receiptNumber,
       date: new Date().toLocaleDateString('en-IN'),
-      time: new Date().toLocaleTimeString('en-IN')
+      time: new Date().toLocaleTimeString('en-IN'),
     };
 
-    setDonations(prev => [newDonation, ...prev]);
+    setDonations((prev) => [newDonation, ...prev]);
     setCurrentReceipt(newDonation);
     setReceiptSent(true);
 
+    // Auto-hide success message after 5 seconds
     setTimeout(() => {
       setReceiptSent(false);
       setCurrentReceipt(null);
     }, 5000);
 
+    // Reset form
     setFormData({
       donorName: '',
       vehicleNumber: '',
       mobileNumber: '',
-      amount: ''
+      amount: '',
     });
   };
 
-  const totalDonations = donations.reduce((sum, d) => sum + parseFloat(d.amount || 0), 0);
+  const totalDonations = donations.reduce(
+    (sum, d) => sum + parseFloat(d.amount || 0),
+    0
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 via-yellow-50 to-red-50">
@@ -72,6 +207,7 @@ function TempleDonationApp() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
+          {/* Donation Form */}
           <div className="bg-white rounded-lg shadow-lg p-6">
             <h2 className="text-2xl font-bold text-orange-700 mb-6 flex items-center gap-2">
               <FileText className="w-6 h-6" />
@@ -152,19 +288,16 @@ function TempleDonationApp() {
                   <CheckCircle className="w-5 h-5" />
                   Receipt Sent Successfully!
                 </div>
-                <p className="text-sm text-green-600">
-                  SMS sent to {currentReceipt.mobileNumber}
-                </p>
-                <p className="text-xs text-green-600 mt-1">
-                  Receipt #: {currentReceipt.receiptNumber}
-                </p>
+                <p className="text-sm text-green-600">SMS sent to {currentReceipt.mobileNumber}</p>
+                <p className="text-xs text-green-600 mt-1">Receipt #: {currentReceipt.receiptNumber}</p>
               </div>
             )}
           </div>
 
+          {/* Donations List */}
           <div className="bg-white rounded-lg shadow-lg p-6">
             <h2 className="text-2xl font-bold text-orange-700 mb-4">Today's Collections</h2>
-            
+
             <div className="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg p-4 mb-6">
               <p className="text-sm opacity-90">Total Collected</p>
               <p className="text-3xl font-bold">₹ {totalDonations.toLocaleString('en-IN')}</p>
@@ -176,7 +309,10 @@ function TempleDonationApp() {
                 <p className="text-gray-500 text-center py-8">No donations recorded yet</p>
               ) : (
                 donations.map((donation, index) => (
-                  <div key={index} className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow">
+                  <div
+                    key={`${donation.receiptNumber}-${index}`}
+                    className="border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                  >
                     <div className="flex justify-between items-start mb-2">
                       <div>
                         <p className="font-semibold text-gray-800">{donation.donorName}</p>
@@ -196,6 +332,7 @@ function TempleDonationApp() {
           </div>
         </div>
 
+        {/* Sample SMS Preview */}
         {donations.length > 0 && (
           <div className="mt-8 bg-white rounded-lg shadow-lg p-6">
             <h3 className="text-xl font-bold text-orange-700 mb-4">Sample Receipt SMS</h3>
@@ -217,3 +354,7 @@ function TempleDonationApp() {
     </div>
   );
 }
+
+// Render the app
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<TempleDonationApp />);
